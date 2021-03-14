@@ -1,0 +1,25 @@
+{
+  "name": "kyleaddis.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tsc",
+    "watch": "npx tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyleaddis/kyleaddis.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyleaddis/kyleaddis.github.io/issues"
+  },
+  "homepage": "https://github.com/kyleaddis/kyleaddis.github.io#readme",
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  }
+}
