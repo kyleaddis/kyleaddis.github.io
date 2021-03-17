@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --persian-indigo: #2e168dff;
+  --ultramarine: #4622daff;
+  --maximum-blue-purple: #b6a7f1ff;
+  --white: #ffffffff;
+  --onyx: #414141ff;
+  --red: #c1292eff;
+  --green: #7dde92ff;
+  --blue: #279af1ff;
+  --grey: #60656fff;
+  --black: #131112ff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  color: var(--white);
+  font-family: 'Courier New', monospace;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background-color: var(--blue);
+  height: 300px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
+}
+
+.site-heading-wrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar > ul {
+  list-style-type: none;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.logo::after {
+  width: 100%;
+  max-width: 50%;
+  height: 6px;
+  display: block;
+  content: '';
+  border-radius: 500px;
+  background: var(--green);
+  transition: max-width ease 0.3s;
+}
+.logo:hover::after {
+  max-width: 25%;
+}
+
+.terminal-wrapper {
+  position: relative;
+  bottom: 200px;
+  left: 20px;
+}
+.terminal {
+  width: 500px;
+  height: 300px;
+  background-color: var(--black);
+  border-style: solid;
+  border-radius: 25px;
+  border-color: var(--grey);
+  border-width: 5px;
+  font-family: 'VT323';
+  line-height: 0.5;
+}
+.text {
+  color: var(--green);
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+.memory {
+  color: var(--green);
+  text-align: center;
+}
+
+.label,
+.input {
+  display: inline-block;
+}
+
+.input {
+  margin-right: -10px;
+}
+.input,
+textarea {
+  color: var(--green);
+  background-color: black;
+}
+
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 30px;
+  color: var(--green);
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: var(--green);
+  }
+}
