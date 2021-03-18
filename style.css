@@ -16,12 +16,14 @@
   --black: #131112ff;
 }
 
+html,
 body {
   margin: 0;
   padding: 0;
   background-color: var(--white);
   color: var(--white);
   font-family: 'Courier New', monospace;
+  font-size: medium;
 }
 
 .site-header {
@@ -87,12 +89,42 @@ body {
   border-color: var(--grey);
   border-width: 5px;
   font-family: 'VT323';
-  line-height: 0.5;
+  line-height: 0.1;
 }
-.text {
+
+.text,
+#term-select,
+#term-select-label {
   color: var(--green);
   padding-left: 10px;
+  padding-top: 0;
   text-transform: uppercase;
+}
+
+#term-select-label {
+  margin-right: -5px;
+}
+
+#term-select {
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: var(--black);
+  font-family: 'VT323';
+  font-size: inherit;
+  width: fit-content;
+  padding: 0;
+}
+
+.term-input-wrapper {
+  position: relative;
+  bottom: 8px;
+}
+
+.select-option {
+  background-color: var(--black);
+  font-family: 'VT323';
+  font-size: inherit;
 }
 
 .memory {
@@ -108,6 +140,7 @@ body {
 .input {
   margin-right: -10px;
 }
+
 .input,
 textarea {
   color: var(--green);
@@ -116,7 +149,15 @@ textarea {
 
 .blinking-cursor {
   font-weight: 100;
-  font-size: 30px;
+  color: var(--green);
+  animation: 1s blink step-end infinite;
+  margin: 0;
+  padding: 0;
+  margin-left: -15px;
+}
+
+.loading-cursor {
+  font-weight: 100;
   color: var(--green);
   animation: 1s blink step-end infinite;
 }
@@ -129,4 +170,10 @@ textarea {
   50% {
     color: var(--green);
   }
+}
+
+#term-loading {
+  position: relative;
+  bottom: 16px;
+  display: none;
 }
