@@ -112,7 +112,6 @@ body {
   background-color: var(--black);
   font-family: 'VT323';
   font-size: inherit;
-  width: fit-content;
   padding: 0;
 }
 
@@ -147,7 +146,7 @@ textarea {
   background-color: black;
 }
 
-.blinking-cursor {
+#blinking-cursor {
   font-weight: 100;
   color: var(--green);
   animation: 1s blink step-end infinite;
